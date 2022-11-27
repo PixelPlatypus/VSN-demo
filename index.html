@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://unpkg.com/eva-icons"></script>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="styles.css">
+    <title>KMSS</title>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <!-- -----------------------NAVBAR--------------------------- -->
+        <div class="navbar">
+            <div class="container">
+                <a class="logo" href="#"><img src="./images/kmc.png" width="40px" alt="logo"></a>
+    
+                <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="open nav">
+    
+                <nav>
+                    <img id="mobile-exit" src="images/exit.svg" alt="" class="mobile-menu-exit">
+                    <ul class="primary-nav">
+                        <li class="current"><a href="">Home</a></li>
+                        <li class="#"><a href="">Features</a></li>
+                        <li class="#"><a href="">About</a></li>
+                    </ul>
+    
+                    <ul class="secoundary-nav">
+                        <li class="current"><a href="">About Us</a></li>
+                        <li class="go-premium-cta"><a href="">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    <!-- ------------------------ MAIN ------------------------------>
+    <section class="main-section">
+        <div class="main-cta">
+            <h1>Acedemic Excellence Through Quality Education</h1>
+            <div class="btns">
+                <div class="btn contact-us">Contact Us</div>
+                <div class="btn about-us">About Us</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2 class="features-txt">Features</h2>
+        <div class="container">
+            <div class="item">
+                <h3 >FACULTY</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci excepturi eveniet quo, sed molestias fugiat odio natus tempore rem voluptate voluptatem eum, corporis modi.</p>
+            </div>
+            <div class="item">
+                <h3>ECA</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, impedit tenetur fuga, dolorem quae corporis error explicabo quam non cum voluptates officia, fugit assumenda nam?</p>
+            </div>
+            <div class="item">
+                <h3>LABS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, impedit tenetur fuga, dolorem quae corporis error explicabo quam non cum voluptates officia, fugit assumenda nam?</p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        
+    const mobileBtn = document.getElementById('mobile-cta')
+            nav = document.querySelector('nav')
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+            mobileBtn.addEventListener('click', () => {
+                nav.classList.add('menu-btn');
+            })
+
+            mobileBtnExit.addEventListener('click', () => {
+                nav.classList.remove('menu-btn');
+            })
+
+    </script>
+</body>
+</html>
