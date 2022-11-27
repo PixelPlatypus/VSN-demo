@@ -11,7 +11,7 @@ html {
     --clr-primary: #FAF7F0;
     --clr-secondary: #CDFCF6;
     --clr-tertiary: #BCCEF8;
-    --clr-accent: #6255ed;
+    --clr-accent: #6a5eeb;
 
     --ff-primary: 'Montserrat', sans-serif;
     --ff-secondary: 'Poppins', sans-serif;
@@ -54,6 +54,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a:not([class]) {
@@ -299,11 +300,16 @@ ul {
 
 .main-cta h1 {
     display: flex;
-    font-size: clamp(4rem, 3rem, .5rem);
+    font-size: 4rem;
     text-align: center;
     color: var(--clr-primary);
     text-shadow: 2px 2px #ccc;
+}
 
+@media only screen and (max-width: 400px) {
+  .main-cta h1{
+    font-size: 3rem;
+  }
 }
 
 .btns {
@@ -321,8 +327,10 @@ ul {
     color: var(--clr-primary);
     text-align: center;
     border-radius: 1rem;
+}
 
-
+.btn:hover{
+  cursor: pointer;
 }
 
 /* -------------------- Features --------------------*/
@@ -332,7 +340,8 @@ ul {
     height: 100vh;
     text-align: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2rem;
+  margin-top: 3rem;
 }
   
 .features-section .container {
@@ -343,15 +352,55 @@ ul {
 }
 
 .features-section .container .item {
-    background: var(--clr-secondary);
+    background: var(--clr-accent);
     padding: 2rem;
-    height: 20rem;
+    max-height: 25rem;
+    max-width: 80vw;
+    margin: 0 auto;
     text-align: left;
     display: flex;
     gap: 10px;
     flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 5px rgba(216, 216, 216, 0.71);
+    color: var(--clr-primary);
 }
 
 .item h3{
     text-align: center;
+}
+
+.item p{
+  color: rgb(224, 224, 224);
+}
+
+@media only screen and (max-width: 1000px) {
+    .features-section .container {
+      flex-direction: column;
+    }
+}
+
+.footer{
+  display: flex;
+  position: relative;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+}
+
+.hidden {
+  transform: translateX(var(--translate-val));
+  opacity: 0;
+  transition: 1s linear;
+}
+
+.show {
+  transform: translateX(0%);
+  opacity: 1;
+
 }

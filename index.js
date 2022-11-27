@@ -1,12 +1,13 @@
 
-const mobileBtn = document.getElementById('mobile-cta')
-var nav = document.querySelector('nav')
-var mobileBtnExit = document.getElementById('mobile-exit');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
 
-mobileBtn.addEventListener('click', () => {
-    nav.classList.add('menu-btn');
-})
-
-mobileBtnExit.addEventListener('click', () => {
-    nav.classList.remove('menu-btn');
-})
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
