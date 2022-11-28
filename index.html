@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://unpkg.com/eva-icons"></script>
-    <link rel="stylesheet" href="">
     <link rel="stylesheet" href="styles.css">
     <title>KMSS</title>
-    <script defer src="index.js"></script>
+    <link rel="shortcut icon" href="/images/kmc.png" type="image/x-icon">
 </head>
 <body>
     <!-- -----------------------NAVBAR--------------------------- -->
@@ -23,13 +22,12 @@
                     <img id="mobile-exit" src="images/exit.svg" alt="" class="mobile-menu-exit">
                     <ul class="primary-nav">
                         <li class="current"><a href="">Home</a></li>
-                        <li class="#"><a href="">Features</a></li>
-                        <li class="#"><a href="">About</a></li>
+                        <li class="#"><a href="#features">Features</a></li>
                     </ul>
     
                     <ul class="secoundary-nav">
-                        <li class="current"><a href="">About Us</a></li>
-                        <li class="go-premium-cta"><a href="">Contact Us</a></li>
+                        <li class="current"><a href="#about">About Us</a></li>
+                        <li class="test-cta"><a href="#contact">Contact Us</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,49 +38,91 @@
         <div class="main-cta">
             <h1>Acedemic Excellence Through Quality Education</h1>
             <div class="btns">
-                <div class="btn contact-us">Contact Us</div>
-                <div class="btn about-us">About Us</div>
+                <div class="btn contact-us" >
+                <a href="mailto:kmc@kmc.com">E-Mail Us</a>
+                </div>
+                <div class="btn about-us">
+                    <a href="#about">About Us</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="features-section hidden">
+    <!-- -------------------FEATURES ----------------------->
+
+    <section id="features" class="features-section">
         <h2 class="features-txt">Features</h2>
         <div class="container">
             <div class="item">
+                <i class="fa-regular fa-chalkboard-user"></i>
                 <h3 >FACULTY</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe adipisci excepturi eveniet quo, sed molestias fugiat odio natus tempore rem voluptate voluptatem eum, corporis modi.</p>
+                <p>We have variety of faculties to ensure academic par excellence and attain outstanding results in board exams.</p>
             </div>
             <div class="item">
                 <h3>ECA</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, impedit tenetur fuga, dolorem quae corporis error explicabo quam non cum voluptates officia, fugit assumenda nam?</p>
+                <p>Beside acadmic excellence, kmc conducts a number of eca programs such as sports, quiz so as to explore and promote students' hidden talents.</p>
             </div>
             <div class="item">
                 <h3>LABS</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, impedit tenetur fuga, dolorem quae corporis error explicabo quam non cum voluptates officia, fugit assumenda nam?</p>
+                <p>Students are provided with labs for different subjects to witness the physical significance of the theories they have learnt.</p>
             </div>
         </div>
     </section>
+
+    <!------------------------- ABOUT US ------------------------>
+    <section id="about" class="about-us-section">
+        <div class="about-col-rt">
+            <h3 class="about-us-txt">About Us</h3>
+            <p>
+                KMC as a institution is comitted to redefining modern education and retaining the historical legacy of academic excellence throughout and aspire for scoring even higher in academics. KMC makes deliberate efforts to set the students dreams into into motion and hanker to take the learning experience beyond the clasroom to make it a unique pool of talent. 
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="col-lt">
+        </div>
+        <div class="col-rt">
+            <h3 class="contact-txt">Contact Us</h3>
+            <form action="">
+                <label for="Name">Name:</label>
+                <br>
+                <input type="text" name="Name" id="Name">
+                <br>
+                <label for="Email">Email:</label>
+                <br>
+                <input type="email" name="Email" id="Email">
+               
+                <br>
+                <label for="message">Message:</label>
+                <br>
+                <textarea name="message" id="message" cols="20" rows="10"></textarea>
+            </form>
+        </div>
+    </section>
+
+    <!-- -------------------FOOTER ------------------>
 
     <section class="footer">
         <p>&copy; All rights reserved 2022 </p>
     </section>
 
-
+    <!------------- JS FOR HANDBURGER MENU--------- -->
     <script>
-        
     const mobileBtn = document.getElementById('mobile-cta')
-            nav = document.querySelector('nav')
-            mobileBtnExit = document.getElementById('mobile-exit');
+    nav = document.querySelector('nav')
+    mobileBtnExit = document.getElementById('mobile-exit');
 
-            mobileBtn.addEventListener('click', () => {
-                nav.classList.add('menu-btn');
-            })
+    mobileBtn.addEventListener('click', () => {
+        nav.classList.add('menu-btn');
+    })
 
-            mobileBtnExit.addEventListener('click', () => {
-                nav.classList.remove('menu-btn');
-            })
-
+    mobileBtnExit.addEventListener('click', () => {
+        nav.classList.remove('menu-btn');
+    })
     </script>
+
+    <script src="https:/kit.fontawesome.com/22dee680ec.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>
